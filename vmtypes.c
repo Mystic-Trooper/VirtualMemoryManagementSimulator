@@ -65,35 +65,6 @@ void displayTable(vmTable_t** tableToView)
     printf("\n********************* SEQUENCE END ***************************\n ");
 }
 
-/* DECIDED NOT TO USE DUE TO COMPLEXITY
-
-// Initializes dramMatrix
-dramMatrix* createDRAMmatrix(int frameCount, int frameSize)
-{
-    dramMatrix* M = malloc(sizeof(dramMatrix));
-    M->rowList = malloc(frameCount*sizeof(dramNode*));
-    M->columnList = malloc(frameSize*sizeof(dramNode*));
-    M->rows = frameCount;
-    M->columns = frameSize;
-    M->freeFrame = 0;
-
-    // If there is not enough memory to make call to malloc(), we must free memory
-    if(M == NULL || M->rowList == NULL || M->columnList == NULL) {
-        printf("Error - Could not allocate a new Physical Memory Matrix!\n");
-        free(M);
-    }
-
-    return M;
-}
-
-*/
-/*
-    Creating simulated physical memory space
-
-    @Param  {frameCount} The number of frames we want to represent in physical memory
-    @Param  {blockSize}  The number of offsets we want per physical memory frame
-    @Return {int**}      The dynamically allocated physical memory space
-*/
 int** dramAllocate(int frameCount, int blockSize)
 {
     int** temp;

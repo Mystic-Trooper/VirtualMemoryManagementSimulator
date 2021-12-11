@@ -6,14 +6,6 @@
 #include <time.h>
 #include "vmtypes.h"
 
-
-/*
-    File:           vm_sim.c
-    Name:           Tran, Don
-    Date:           20 April 2018
-    Course:         COMP3500 - See: www.eng.auburn.edu/files/acad_depts/csse/syllabi/comp3500.2016.pdf
-*/
-
 #define FRAME_SIZE        256       // Size of each frame
 #define TOTAL_FRAME_COUNT 256       // Total number of frames in physical memory
 #define PAGE_MASK         0xFF00    // Masks everything but the page number
@@ -111,7 +103,6 @@ int main(int argc, char *argv[])
         return -1;
     }
 
-    printf("\nWelcome to Don's VM Simulator Version 1.0");
     printf("\nNumber of logical pages: %d\nPage size: %d bytes\nPage Table Size: %d\nTLB Size: %d entries\nNumber of Physical Frames: %d\nPhysical Memory Size: %d bytes", PAGE_TABLE_SIZE, PAGE_READ_SIZE, PAGE_TABLE_SIZE, TLB_SIZE, FRAME_SIZE, PAGE_READ_SIZE * FRAME_SIZE);
 
 
